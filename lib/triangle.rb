@@ -8,7 +8,7 @@ class Triangle
   end
 
   def kind
-  if (@side_a * @side_b * @side_c) == 0
+  if (@side_a * @side_b * @side_c) == 0 || (@side_a + @side_b) <= @side_c
       begin
         raise TriangleError
           puts error.message
