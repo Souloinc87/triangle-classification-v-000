@@ -8,6 +8,12 @@ class Triangle
   end
 
   def kind
+    if @side_a == 0 && @side_b == 0 && @side_c == 0 
+      begin 
+        raise TriangleError
+      rescue TriangleError => error 
+        puts error.message 
+      end 
     if @side_a == @side_b && @side_b == @side_c
       :equilateral
     elsif @side_a < @side_b && @side_b == @side_c || @side_a > @side_b && @side_a == @side_c ||
@@ -19,5 +25,8 @@ class Triangle
   end
 
   class TriangleError < StandardError
+    def message 
+      "Each side must equal something!"
+    end 
   end 
 end
