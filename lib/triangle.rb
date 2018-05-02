@@ -21,13 +21,6 @@ class Triangle
       :isosceles
     elsif @side_a != @side_b && @side_b != @side_c
       :scalene
-    elsif @side_a == 0 && @side_b == 0 && @side_c == 0
-      begin
-        raise TriangleError
-      rescue TriangleError => error
-        puts error.message
-      end
-
     end
   end
 
