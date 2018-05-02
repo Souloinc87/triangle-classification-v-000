@@ -5,9 +5,11 @@ class Triangle
     @side_a = side_a
     @side_b = side_b
     @side_c = side_c
-  end 
+  end
 
-  def kind 
+  def kind
+    if @side_a == @side_b && @side_b == @side_c
+      :equilateral
 
   end 
 end
